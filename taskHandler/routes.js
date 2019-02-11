@@ -7,6 +7,8 @@ router.post('/createNewTask', isLoggedIn, isConsumer, impl.createNewTask);
 router.post('/completeTask', isLoggedIn, isWorker, impl.completeTask);
 router.post('/reviewConsumer', isLoggedIn, isWorker, impl.reviewConsumer);
 router.post('/reviewWorker', isLoggedIn, isConsumer, impl.reviewWorker);
+router.get('/taskListForWorker', isLoggedIn, isWorker, impl.reviewWorker);
+router.get('/taskListForConsumer', isLoggedIn, isWorker, impl.reviewWorker);
 
 
 module.exports = router;

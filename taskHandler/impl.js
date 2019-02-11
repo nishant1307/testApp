@@ -118,6 +118,32 @@ module.exports = {
         });
       }
     });
+  },
+
+  taskListForWorker: (req, res) => {
+    UserTask.findAll({
+      where: {
+        taskFor: req.client.uniqueId
+      }
+    }).then(tasks => {
+      res.send({
+        status: true,
+        taskList: tasks
+      })
+    });
+  },
+
+  taskListForConsumer: (req, res) => {
+    UserTask.findAll({
+      where: {
+        taskBy: req.client.uniqueId
+      }
+    }).then(tasks => {
+      res.send({
+        status: true,
+        taskList: tasks
+      })
+    });
   }
 
 
