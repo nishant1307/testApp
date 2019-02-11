@@ -1,0 +1,12 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "123",
+    "database": "horafin-test",
+    "host": "localhost",
+    "logging": false,
+    "freezeTableName": true,
+    "operatorsAliases": false,
+    "dialect": "postgres"
+  }
+}
