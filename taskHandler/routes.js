@@ -3,6 +3,9 @@ const router = express.Router();
 var impl = require('./impl');
 
 router.post('/createNewTask', isLoggedIn, impl.createNewTask);
+router.post('/completeTask', isLoggedIn, impl.completeTask);
+router.post('/reviewConsumer', isLoggedIn, impl.reviewConsumer);
+router.post('/reviewWorker', isLoggedIn, impl.reviewWorker);
 
 
 module.exports = router;

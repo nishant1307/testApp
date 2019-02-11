@@ -44,7 +44,7 @@ module.exports = {
       } else {
         const token = jwt.sign({
           clientId: client.uniqueId,
-          role: req.body.role;
+          role: req.body.role
         }, configAuth.jwtAuthKey.secret, {
             expiresIn: configAuth.jwtAuthKey.tokenLife
         });

@@ -18,7 +18,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/users', require('./userOnboarding/routes'));
 app.use('/api/tasks', require('./taskHandler/routes'));
-
+app.get('/', (req,res) => {
+  res.send("Hello World");
+})
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -33,6 +35,11 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+var db = require('./database/models/index');
+db.sequelize.sync({ force: false}).then(() => {
+  console.log("Sync done");
 });
 
 module.exports = app;

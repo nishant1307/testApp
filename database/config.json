@@ -1,12 +1,16 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "123",
-    "database": "horafin-test",
-    "host": "localhost",
+    "username": "cdkovqntwbziyn",
+    "password": "1ea00847ebfee7a2a9b5ce0d62944fec08524fb1a176e1ccae361cbd66df8b9a",
+    "database": "d3aaq5jkbnqaft",
+    "host": "ec2-54-243-128-95.compute-1.amazonaws.com",
     "logging": false,
     "freezeTableName": true,
     "operatorsAliases": false,
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "ssl": true,
+    "dialectOptions": {
+            "ssl": true
+            }
   }
 }
